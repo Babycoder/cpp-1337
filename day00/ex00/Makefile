@@ -17,7 +17,7 @@ FLAGS=-Wall -Wextra -Werror
 NAME=megaphone
 
 $(NAME):
-	clang++ $(FLAGS) $(SRC) -o $(NAME)
+	g++ $(FLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

@@ -1,5 +1,12 @@
 #include <iostream>
 
+char    capp(char c)
+{
+    if (c >= 97 && c <= 122)
+        c -= 32;
+    return (c);
+}
+
 int     main(int ac, char **av)
 {
     int i = 1;
@@ -9,19 +16,18 @@ int     main(int ac, char **av)
         while(i < ac)
         {
             j = 0;
-            while(av[i][j])
+            while(av[i][j] != '\0')
             {
-                av[i][j] -=32;
+                std::cout << capp(av[i][j]);
                 j++;
             }
-            std::cout << av[i] << ' ';
             i++;
         }
     }
     else
         std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 
-    std::cout << '\n';
+    std::cout << std::endl;
 
     return (0);
 }
