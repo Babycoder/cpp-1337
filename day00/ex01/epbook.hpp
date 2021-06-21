@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/20 22:34:21 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/20 23:30:36 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/06/21 11:55:38 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 	std::string underwear_color;
 	std::string darkest_secret;
     void    add(void);
+	void	print_contact(void);
 };
 
 
