@@ -10,11 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_CLASS_H
-# define CONTACT_CLASS_H
+#ifndef EPBOOK_H
+# define EPBOOK_H
 # include <iostream>
-
-using namespace std;
 
 class Contact
 {

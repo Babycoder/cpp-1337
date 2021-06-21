@@ -17,7 +17,7 @@ FLAGS=-Wall -Wextra -Werror
 NAME=epbook
 
 $(NAME):
-	g++ $(FLAGS) $(SRC) -o $(NAME)
+	clang++ $(FLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

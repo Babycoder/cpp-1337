@@ -13,55 +13,45 @@
 #include "epbook.hpp"
 
 
+void    Contact::add(void)
+{
+    std::cout << "First Name: ";
+    this->first_name = get_input();
+    std::cout << "Last Name: ";
+    this->last_name = get_input();
+    std::cout << "nickname: ";
+    this->nick_name = get_input();
+    std::cout << "login: ";
+    this->login = get_input();
+    std::cout << "postal address: ";
+    this->postal_address = get_input();
+    std::cout << "email address: ";
+    this->email_address = get_input();
+    std::cout << "phone number: ";
+    this->phone_number = get_input();
+    std::cout << "birthday date: ";
+    this->birthday_date = get_input();
+    std::cout << "favorite meal: ";
+    this->favorite_meal = get_input();
+    std::cout << "underwear color: ";
+    this->underwear_color = get_input();
+    std::cout << "darkest secret: ";
+    this->darkest_secret = get_input();
+    return ;
+}
+
 void    ft_menu()
 {
-    std::cout << "Choose an option:" << std::endl;
+    std::cout << "==> Choose an option <==" << std::endl;
 	std::cout << "ADD _ SEARCH _ EXIT" << std::endl;
 }
 
-string  get_input()
+std::string  get_input()
 {
-	string input;
+	std::string input;
 
-	while (1) {
-	    getline(cin, input);
-        if (cin.eof())
-        {
-            cout << "End!" << std::endl;
-            exit(0);
-        }
-        if (!input.empty())
-            break;
-        cin.clear();
-    }
+	getline(std::cin, input);
     return (input);
-}
-
-void    Contact::add(void)
-{
-    cout << "First Name: ";
-    this->first_name = get_input();
-    cout << "Last Name: ";
-    this->last_name = get_input();
-    cout << "nickname: ";
-    this->nick_name = get_input();
-    cout << "login: ";
-    this->login = get_input();
-    cout << "postal address: ";
-    this->postal_address = get_input();
-    cout << "email address: ";
-    this->email_address = get_input();
-    cout << "phone number: ";
-    this->phone_number = get_input();
-    cout << "birthday date: ";
-    this->birthday_date = get_input();
-    cout << "favorite meal: ";
-    this->favorite_meal = get_input();
-    cout << "underwear color: ";
-    this->underwear_color = get_input();
-    cout << "darkest secret: ";
-    this->darkest_secret = get_input();
-    return ;
 }
 
 void	add_contact(Contact list[], int size)
@@ -69,13 +59,17 @@ void	add_contact(Contact list[], int size)
 	list[size].add();
 }
 
+void    show_contacts(Contact list[], int size)
+{
+
+}
 
 int main()
 {
     Contact contact[8];
     int     size;
-    string choice;
-	//int			index;
+    int     index;
+    std::string choice;
     
     size = 0;
     std::cout << "*****  Welcome to Ezio's E-phoneBook   ******" << std::endl;
@@ -93,8 +87,21 @@ int main()
 			add_contact(contact, size);
 			size++;
 		}
+        else if (choice == "SEARCH")
+        {
+            if (size  == 0)
+            {
+                std::cout << "List is Empy!!" << std::endl;
+                continue ; 
+            }
+            show_contacts(contact, size);
+            //index = get_index();
+            //print_contact(contact,size);
+
+        }
         else if (choice == "EXIT")
-            return(0);
+            return(0) ;
+
     }
     
 }
