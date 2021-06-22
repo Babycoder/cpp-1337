@@ -6,13 +6,21 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 20:32:16 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/21 11:56:37 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/06/21 15:57:30 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "epbook.hpp"
 
-void    Contact::to_string(void)
+std::string  get_input()
+{
+	std::string input;
+
+	getline(std::cin, input);
+    return (input);
+}
+
+void    Contact::print_contact(void)
 {
     std::cout << "First Name: ";
     std::cout << this->first_name << std::endl;
@@ -71,13 +79,6 @@ void    ft_menu()
 	std::cout << "ADD _ SEARCH _ EXIT" << std::endl;
 }
 
-std::string  get_input()
-{
-	std::string input;
-
-	getline(std::cin, input);
-    return (input);
-}
 
 void	add_contact(Contact list[], int size)
 {
@@ -119,26 +120,21 @@ void    show_contacts(Contact contact[], int size)
 
 }
 
-int		get_index(int list_len)
+int		get_index(int size)
 {
-	int my_number = 0;
-    std::string input = "";
+	int index = 0;
+    std::string str = "";
 
  	while (true) {
-		std::cout << "Please enter a valid ID: ";
-		std::getline(std::cin, input);
-		std::stringstream myStream(input);
-		if (myStream >> my_number)
-			if (my_number >= 0 && my_number < list_len)
+		std::cout << "Please enter an ID: ";
+		std::getline(std::cin, str);
+		std::stringstream myStream(str);
+		if (myStream >> index)
+			if (index >= 0 && index < size)
 				break;
-		if (std::cin.eof())
-        {
-            std::cout << "Bye!" << std::endl;
-            exit(0);
-        }
-		std::cout << "Invalid ID, please try again" << std::endl;
+		std::cout << "Invalid ID !!" << std::endl;
  	}
- 	return my_number;
+ 	return index;
 }
 
 
@@ -174,12 +170,11 @@ int main()
             }
             show_contacts(contact, size);
             index = get_index(size);
-            //contact[index].print_contact();
+            contact[index].print_contact();
 
         }
         else if (choice == "EXIT")
             return(0) ;
-
-    }
-    
+    } 
+	return(0);
 }

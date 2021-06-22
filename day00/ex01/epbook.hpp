@@ -13,6 +13,7 @@
 #ifndef EPBOOK_H
 # define EPBOOK_H
 # include <iostream>
+# include <sstream>
 
 class Contact
 {
