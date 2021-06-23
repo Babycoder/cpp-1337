@@ -20,6 +20,23 @@ std::string  get_input()
     return (input);
 }
 
+std::string ft_output(std::string str)
+{
+	int len = str.length();
+	if (len == 10)
+		return str;
+	if (len < 10)
+	{
+		str.append(10 - str.length(), ' ');
+		return str;
+	}
+	if (len > 10)
+	{
+		return str.substr(0, 9) + '.';
+	}
+	return NULL;
+}
+
 void    Contact::print_contact(void)
 {
     std::cout << "First Name: ";
@@ -73,6 +90,13 @@ void    Contact::add(void)
     return ;
 }
 
+void    Contact::list_contact(void)
+{
+    	std::cout << ft_output(this->first_name) << "|";
+		std::cout << ft_output(this->last_name) << "|";
+		std::cout << ft_output(this->nick_name) << "|";
+}
+
 void    ft_menu()
 {
     std::cout << "==> Choose an option <==" << std::endl;
@@ -85,22 +109,6 @@ void	add_contact(Contact list[], int size)
 	list[size].add();
 }
 
-std::string ft_output(std::string str)
-{
-	int len = str.length();
-	if (len == 10)
-		return str;
-	if (len < 10)
-	{
-		str.append(10 - str.length(), ' ');
-		return str;
-	}
-	if (len > 10)
-	{
-		return str.substr(0, 9) + '.';
-	}
-	return NULL;
-}
 
 void    show_contacts(Contact contact[], int size)
 {
@@ -112,13 +120,12 @@ void    show_contacts(Contact contact[], int size)
 	for (int i = 0; i < size; i++)
 	{
 		std::cout << i << " |";
-		std::cout << ft_output(contact[i].first_name) << "|";
-		std::cout << ft_output(contact[i].last_name) << "|";
-		std::cout << ft_output(contact[i].nick_name) << "|";
+        contact[i].list_contact();
 		std::cout << std::endl;
 	}
 
 }
+
 
 int		get_index(int size)
 {
