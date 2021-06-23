@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/06 20:32:16 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/21 15:57:30 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/06/23 15:31:36 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ void    Contact::add(void)
     std::cout << "login: ";
     this->login = get_input();
     std::cout << "postal address: ";
-    this->postal_address = get_input();
     std::cout << "email address: ";
+    this->postal_address = get_input();
     this->email_address = get_input();
     std::cout << "phone number: ";
     this->phone_number = get_input();
