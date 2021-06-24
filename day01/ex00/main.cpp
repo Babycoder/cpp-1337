@@ -12,19 +12,21 @@
 
 #include "Pony.hpp"
 
-/*void    ponyOnTheStack()
+void    ponyOnTheStack()
 {
-	std::cout << "This is the pony on the stack :\n";
+	std::cout << "====== This is the pony on the stack =====\n";
 	Pony	pn(std::string("stack_pony"));
 	pn.born();
 	pn.eat();
-}*/
+	pn.run();
+}
 
 void	ponyOnTheHeap()
 {
-	std::cout << "This is the pony on the heap :\n";
+	std::cout << "****** This is the pony on the heap *****\n";
 	Pony	*p = new Pony(std::string("heap_pony"));
 	p->born();
+	p->eat();
 	p->run();
 	delete p;
 }
@@ -33,7 +35,7 @@ void	ponyOnTheHeap()
 
 int main()
 {
-    //ponyOnTheStack();
+    ponyOnTheStack();
     ponyOnTheHeap();
     return(0);
 }

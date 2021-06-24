@@ -13,7 +13,7 @@
 #include "Pony.hpp"
 
 
-Pony::Pony(std::string color): name(name) {}
+Pony::Pony(std::string name): name(name) {}
 
 void Pony::born()
 {
