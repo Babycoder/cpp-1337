@@ -74,8 +74,8 @@ void    Contact::add(void)
     std::cout << "login: ";
     this->login = get_input();
     std::cout << "postal address: ";
-    std::cout << "email address: ";
     this->postal_address = get_input();
+    std::cout << "email address: ";
     this->email_address = get_input();
     std::cout << "phone number: ";
     this->phone_number = get_input();
