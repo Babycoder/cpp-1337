@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 11:00:21 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/29 12:29:59 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/06/29 12:33:02 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ZOMBIE_H
 
 #include <iostream>
-#include <string>
 
 class Zombie
 {
