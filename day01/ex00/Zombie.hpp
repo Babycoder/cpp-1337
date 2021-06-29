@@ -1,30 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/23 17:11:52 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/23 19:31:42 by ayghazal         ###   ########.fr       */
+/*   Created: 2021/06/29 11:00:21 by ayghazal          #+#    #+#             */
+/*   Updated: 2021/06/29 11:20:20 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_H
-#define PONY_H
+#ifndef ZOMBIE_H
+#define ZOMBIE_H
 
-# include <iostream>
+#include <iostream>
+#include <string>
 
-class   Pony
+class Zombie
 {
     private:
         std::string name;
-	public:
-	    Pony(std::string name);
-		void born();
-		void eat();
-		void run();
+    public:
+        Zombie(void);
+        ~Zombie(void);
 };
-
 
 #endif
