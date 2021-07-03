@@ -5,25 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/07/02 12:36:36 by ayghazal          #+#    #+#              #
-#    Updated: 2021/07/03 11:57:18 by ayghazal         ###   ########.fr        #
+#    Created: 2021/07/03 11:58:57 by ayghazal          #+#    #+#              #
+#    Updated: 2021/07/03 11:58:57 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC=main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
-
-FLAGS=-Wall -Wextra -Werror -std=c++98
-
-NAME=violance
-
-$(NAME):
-	clang++ $(FLAGS) $(SRC) -o $(NAME)
-
-all: $(NAME)
-
-re: fclean all
-
-clean:
-	rm -rf $(NAME)
-
-fclean: clean
