@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sed.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/03 12:06:17 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/07/03 20:14:40 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/04 08:03:38 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <algorithm>
 
 class Sed
 {
@@ -29,7 +30,7 @@ class Sed
         std::ofstream OutputFile;
         void        fileToBuffer(void);
         void        bufferToFile(void);
-        std::string      replaceAll( std::string const& original, std::string const& src, std::string const& dst);
+        std::string      find_replace( std::string const& original, std::string const& src, std::string const& dst);
         
         
     public:
