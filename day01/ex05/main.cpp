@@ -6,7 +6,14 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 10:49:43 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/07/04 10:49:43 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/05 13:14:35 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Karen.hpp"
+
+int     main()
+{
+
+    return(0);
+}
