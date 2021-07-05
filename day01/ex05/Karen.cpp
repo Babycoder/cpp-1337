@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 10:49:35 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/07/05 13:23:24 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/05 13:40:50 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,15 @@ void    Karen::error(void)
 
 void    Karen::complain(std::string level)
 {
-    
+    if (level != "DEBUG" || level != "INFO" || level != "WARNING" || level != "ERROR")
+    {
+        std::cout << "Karen Comment ERROR!!" << std::endl;
+        return ;
+    }
+    int i = 0;
+    std::string comment[4];
+    comment[0] = "DEBUG";
+    comment[1] = "INFO";
+    comment[2] = "WARNING";
+    comment[3] = "ERROR";
 }
