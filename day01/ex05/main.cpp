@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/04 10:49:43 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/07/05 13:14:35 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/05 16:53:39 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int     main()
 {
+    Karen karen;
 
+    karen.complain("dfsdf");
     return(0);
 }

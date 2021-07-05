@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+         #
+#    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/07/04 10:49:45 by ayghazal          #+#    #+#              #
-#    Updated: 2021/07/05 13:27:52 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/07/05 16:51:11 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FLAGS=-Wall -Wextra -Werror -std=c++98
 NAME=karen
 
 $(NAME):
-	clang++ $(FLAGS) $(SRC) -o $(NAME)
+	g++ $(FLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 
