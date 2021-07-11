@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 15:05:49 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/29 16:35:56 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/06 11:06:28 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int main()
     
     while(++i < N)
         test[i].announce();
-    
+    delete [] test;
     return (0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 15:06:24 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/29 19:32:39 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/06 11:01:56 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Zombie::Zombie()
 {
-    //std::cout << "Constructo called" << std::endl;
     return;
 }
 

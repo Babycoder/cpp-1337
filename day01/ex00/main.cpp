@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/29 10:58:48 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/06/29 12:30:41 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/06 10:55:18 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int     main()
 {
-    randomChump("zabzob");
-    randomChump("ZakZOk");
+    randomChump("Leo");
+    randomChump("Pulga");
     return(0);
 }
