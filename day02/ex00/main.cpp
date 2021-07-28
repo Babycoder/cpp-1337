@@ -6,7 +6,13 @@
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/13 14:04:06 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/07/13 14:04:07 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/07/28 11:18:42 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Fixed.hpp"
+
+int     main(void)
+{
+    Fixed a;
+}
