@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 15:16:27 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/08/09 11:58:21 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/08/09 14:53:13 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class ClapTrap {
         int _Attack;
     
     public  :
+        ClapTrap(void);
         ClapTrap(std::string str);
         ClapTrap(ClapTrap const & src);
         ~ClapTrap(void);

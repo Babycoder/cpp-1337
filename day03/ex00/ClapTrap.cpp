@@ -6,15 +6,19 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 15:16:18 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/08/09 12:06:06 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/08/09 14:52:53 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
    
 
-ClapTrap::ClapTrap(std::string str) : _Name(str), _Hit(10), _Energy(10), _Attack(0){
+ClapTrap::ClapTrap(void)
+{
     std::cout << "Default Constructor called" << std::endl;
+}
+
+ClapTrap::ClapTrap(std::string str) : _Name(str), _Hit(10), _Energy(10), _Attack(0){
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src){
