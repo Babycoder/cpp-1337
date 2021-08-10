@@ -6,9 +6,12 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/06 15:16:27 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/08/09 15:00:36 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/08/10 22:44:29 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef ClapTrap_H
+#define ClapTrap_H
 
 #include <iostream>
 #include <string>
@@ -44,4 +47,6 @@ class ClapTrap {
     
         void        setEnergy(int energy);
         int         getEnergy(void);
-};  
+};
+
+#endif
