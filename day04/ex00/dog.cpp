@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 19:11:51 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/17 23:37:56 by ayghazal         ###   ########.fr       */
+/*   Created: 2021/09/17 23:31:49 by ayghazal          #+#    #+#             */
+/*   Updated: 2021/09/17 23:39:43 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "animals.hpp"
 
-int     main()
+Dog::Dog(): Animal("Dog")
 {
-    const Animal* meta = new Animal();
-    const Animal* j = new Dog();
-    const Animal* i = new Cat();
-    std::cout << j->getType() << " " << std::endl;
-    std::cout << i->getType() << " " << std::endl;
-    i->makeSound();
-    j->makeSound();
-    meta->makeSound();
-   return(0);
+     std::cout << "Dog constructor called" << std::endl;   
+}
+
+Dog::Dog(Dog const & src): Animal(src){}
+
+Dog::~Dog()
+{
+    std::cout << "Dog Destructor called" << std::endl;
+}
+
+Dog &   Dog::operator=(Dog const & rhs)
+{
+    Animal::operator=(rhs);
+    return *this;
+}
+
+void            Dog::makeSound(void) const
+{
+    std::cout << "Haw Haw bobiiiiiz" << std::endl;
 }
