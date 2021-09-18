@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/17 23:20:35 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/18 10:58:07 by ayghazal         ###   ########.fr       */
+/*   Created: 2021/09/18 13:38:47 by ayghazal          #+#    #+#             */
+/*   Updated: 2021/09/18 13:39:10 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "animals.hpp"
 
-Cat::Cat(): Animal("Cat")
+WrongCat::WrongCat(): WrongAnimal("WrongCat")
 {
-    std::cout << "Cat constructor called" << std::endl;
+    std::cout << "WrongCat constructor called" << std::endl;
 }
 
-Cat::Cat(Cat const & src): Animal(src){}
+WrongCat::WrongCat(WrongCat const & src): WrongAnimal(src){}
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    std::cout << "Cat Destructor called" << std::endl;
+    std::cout << "WrongCat Destructor called" << std::endl;
 }
 
-Cat &   Cat::operator=(Cat const & rhs)
+WrongCat &   WrongCat::operator=(WrongCat const & rhs)
 {
-    Animal::operator=(rhs);
+    WrongAnimal::operator=(rhs);
     return *this;
 }
 
-void            Cat::makeSound(void) const
+void            WrongCat::makeSound(void) const
 {
     std::cout << "Meeoooow" << std::endl;
 }

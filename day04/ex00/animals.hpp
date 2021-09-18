@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   animals.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 19:12:25 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/17 23:43:01 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/18 13:43:10 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,14 @@ class Animal {
     Animal(void);
     Animal(std::string str);
     Animal(Animal const & src);
-    ~Animal(void);
+     virtual ~Animal(void);
     
     Animal & operator=(Animal const & rhs);
     
     void        setType(std::string type);
     std::string getType(void) const;
     
-    virtual void    makeSound(void) const;
+     virtual void    makeSound(void) const;
 };
 
 
@@ -67,5 +67,38 @@ class Dog : public Animal{
     void    makeSound(void)const;
 };
 
+class WrongAnimal {
+    protected :
+        std::string type;
+    public :
+
+    WrongAnimal(void);
+    WrongAnimal(std::string str);
+    WrongAnimal(WrongAnimal const & src);
+    virtual ~WrongAnimal(void);
+    
+    WrongAnimal & operator=(WrongAnimal const & rhs);
+    
+    void        setType(std::string type);
+    std::string getType(void) const;
+    
+    void    makeSound(void) const;
+};
+
+class WrongCat : public WrongAnimal{
+    private:
+    
+    protected :
+        
+    public :
+
+    WrongCat(void);
+    WrongCat(WrongCat const & src);
+    ~WrongCat(void);
+    
+    WrongCat & operator=(WrongCat const & rhs);
+    
+    void    makeSound(void)const;
+};
 
 #endif
