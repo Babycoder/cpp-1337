@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:03:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/21 11:29:40 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/21 16:38:51 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdexcept>
 
 class Bureaucrat {
     private :
