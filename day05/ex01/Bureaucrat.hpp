@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:03:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/21 16:38:51 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:43:15 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "Form.hpp"
+
+class Form;
 
 class Bureaucrat {
     private :
@@ -51,6 +54,8 @@ class Bureaucrat {
         
         void	    incrementGrade(void);
         void        decrementGrade(void);
+        void            signForm(Form &form);
+        
     
 
 };

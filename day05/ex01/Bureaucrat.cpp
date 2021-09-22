@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:03:26 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/21 11:53:51 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:40:26 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,4 +112,18 @@ Bureaucrat::GradeTooLowException::~GradeTooLowException(void) throw()
 const char    *		Bureaucrat::GradeTooLowException::what() const throw()
 {
 	return("*BUREAUCRAT* Grade too low");
+}
+
+void				Bureaucrat::signForm(Form &form)
+{
+	try
+	{
+		form.beSigned(*this);
+		std::cout << _name << " signs " << form.getName() << std::endl;
+	}
+	catch (std::exception & e)
+	{
+        std::cout << _name << " cannot sign " << form.getName() << " because " << e.what() << std::endl;
+	}
+	return ;
 }

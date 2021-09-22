@@ -6,11 +6,11 @@
 #    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/20 15:02:53 by ayghazal          #+#    #+#              #
-#    Updated: 2021/09/20 15:14:16 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/09/22 13:01:34 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC= Bureaucrat.cpp main.cpp
+SRC= Bureaucrat.cpp main.cpp Form.cpp
 
 FLAGS=-Wall -Wextra -Werror -std=c++98
 

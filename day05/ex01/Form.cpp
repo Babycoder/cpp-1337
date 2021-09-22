@@ -6,19 +6,19 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:02:25 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/21 17:13:36 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:38:29 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form(): _name(""), _gradeToExecute(1), _gradeToSign(1), _signed(false)
+Form::Form(): _name(""), _signed(false),_gradeToSign(1), _gradeToExecute(1)
 {
     std::cout << "Form Default constructor called" << std::endl;
 }
 
 Form::Form(std::string name, bool isSigned, unsigned int gradeToSign, unsigned int gradeToExecute):
-_name(name), _gradeToExecute(gradeToExecute), _gradeToSign(gradeToSign), _signed(isSigned)
+_name(name), _signed(isSigned), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute)
 {
 	if (gradeToSign > 150 || gradeToExecute > 150)
 		throw GradeTooLowException();
@@ -31,7 +31,7 @@ _name(name), _gradeToExecute(gradeToExecute), _gradeToSign(gradeToSign), _signed
     }
 }
 
-Form::Form(Form const & src): _name(src._name), _gradeToExecute(src._gradeToExecute), _gradeToSign(src._gradeToSign), _signed(src._signed)
+Form::Form(Form const & src): _name(src._name), _signed(src._signed), _gradeToSign(src._gradeToSign), _gradeToExecute(src._gradeToExecute)
 {
     std::cout << "Form Copy Constructor called" << std::endl;
 }
@@ -76,6 +76,15 @@ std::ostream    &operator<< (std::ostream &o, const Form &rhs)
     return (o);
 }
 
+void                      Form::beSigned(Bureaucrat &bureaucrat)
+{
+	if (bureaucrat.getGrade() > _gradeToSign)
+		throw GradeTooLowException();
+	else
+		_signed = true;
+	return ;
+}
+
 Form::GradeTooHighException::GradeTooHighException(void)
 {
 	return ;
@@ -105,3 +114,4 @@ const char    *		Form::GradeTooLowException::what() const throw()
 {
 	return("<FORM> Grade too low !");
 }
+

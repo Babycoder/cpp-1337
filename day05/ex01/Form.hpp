@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:02:23 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/21 17:10:14 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/22 14:42:41 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define FORM_HPP
 
 #include "Bureaucrat.hpp"
+
+class Bureaucrat;
 
 class Form {
     private:
@@ -48,6 +50,8 @@ class Form {
 				virtual ~GradeTooLowException(void) throw();
 				virtual const char    *what() const throw();
 		};
+
+		void	beSigned(Bureaucrat & Bureaucrat);
     
 };
 
