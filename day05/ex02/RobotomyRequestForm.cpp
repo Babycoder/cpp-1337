@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/22 15:02:14 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/23 23:15:37 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/23 23:23:38 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ RobotomyRequestForm	&	RobotomyRequestForm::operator=(RobotomyRequestForm const &
 void    RobotomyRequestForm::execute(Bureaucrat const &executor) const
 {
     Form::execute(executor);
-    srand (time(NULL));
+    srand (time(0));
     if (rand() % 2)
     {
         std::cout << "BOBIIIIIIIIIZ..." << _target \

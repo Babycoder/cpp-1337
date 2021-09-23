@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:03:35 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/23 23:14:25 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/23 23:40:56 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,19 @@
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int     main()
 {
-    Bureaucrat b1("B1", 3);
+    Bureaucrat b1("B1", 6);
     Form form("Loan", false, 100, 100);
     ShrubberyCreationForm f1("house");
     RobotomyRequestForm f2("chienpolice");
+    PresidentialPardonForm f3("Zeus");
     
     try
     {
-        f2.execute(b1);
+        f3.execute(b1);
     }
     catch(const std::exception& e)
     {
@@ -32,8 +34,8 @@ int     main()
     }
     try
     {
-        f2.beSigned(b1);
-        f2.execute(b1);
+        f3.beSigned(b1);
+        f3.execute(b1);
     }
     catch(const std::exception& e)
     {

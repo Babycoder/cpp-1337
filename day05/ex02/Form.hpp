@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:02:23 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/23 22:18:21 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/23 23:35:21 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define FORM_HPP
 
 #include "Bureaucrat.hpp"
+#include <fstream>
+#include <cstdlib>
 
 class Bureaucrat;
 
