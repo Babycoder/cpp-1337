@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/21 12:02:23 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/22 14:42:41 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/24 17:36:40 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,13 @@ class Form {
 		virtual ~Form();
         
         Form	&	operator=(Form const & rhs);
+		
         bool                      getSigned(void) const;
-        
 		int                       getGradeToSign(void) const;
 		int                       getGradeToExecute(void) const;
 		std::string               getName(void) const;
         
-        		class GradeTooHighException : public std::exception
+        class GradeTooHighException : public std::exception
 		{
 			public:
 				GradeTooHighException(void);

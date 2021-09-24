@@ -3,21 +3,22 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
+#    By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/20 15:02:53 by ayghazal          #+#    #+#              #
-#    Updated: 2021/09/22 14:59:42 by ayghazal         ###   ########.fr        #
+#    Updated: 2021/09/24 18:04:33 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC= *.cpp
+SRC= Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp \
+	RobotomyRequestForm.cpp  ShrubberyCreationForm.cpp  main.cpp
 
 FLAGS=-Wall -Wextra -Werror -std=c++98
 
 NAME=a.out
 
 $(NAME):
-	g++ $(FLAGS) $(SRC) -o $(NAME)
+	clang++ $(FLAGS) $(SRC) -o $(NAME)
 
 all: $(NAME)
 

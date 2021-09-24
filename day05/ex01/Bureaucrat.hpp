@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ayghazal <ayghazal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/20 15:03:34 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/22 14:43:15 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/24 13:02:51 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ class Bureaucrat {
         
         void	    incrementGrade(void);
         void        decrementGrade(void);
-        void            signForm(Form &form);
+        void        signForm(Form &form);
         
     
 
