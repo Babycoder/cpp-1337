@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 12:56:53 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/30 13:48:53 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:18:58 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,6 @@ class Intern
 				virtual const char    *what() const throw();
 		};
 	private:
-		Form*						m_searchForm(std::string n, std::string t);
 		Form*						_newPresidentialPardonForm(std::string target);
 		Form*						_newRobotomyRequestForm(std::string target);
 		Form*						_newShrubberyCreationForm(std::string target);

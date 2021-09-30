@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/30 12:56:56 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/09/30 14:08:37 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/09/30 17:36:13 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,39 +14,45 @@
 
 Intern::Intern(void)
 {
+    std::cout << "Intern Default constructor called !!" << std::endl;
     return ;
 }
 
 Intern::Intern(const Intern &src)
 {
+    std::cout << "Intern Copy Constructor called !!" << std::endl;
     *this = src;
     return ;
 }
 
 Intern::~Intern(void)
 {
+    std::cout << "Intern Default Destructor called !!" << std::endl;
     return ;
 }
 
-Intern
-&Intern::operator= (const Intern &rhs)
+Intern  & Intern::operator= (const Intern &rhs)
 {
     static_cast <void> (rhs);
     return (*this);
 }
 
 
-Form*
-Intern::makeForm(std::string name, std::string target)
+Form *   Intern::makeForm(std::string name, std::string target)
 {
+    int i = 0;
+    
     try
     {
-       for (int i = 0; i < 3; i++)
-           if (_forms[i] == name)
+        while (i < 3)
+        {
+            if (_forms[i] == name)
             {
                 std::cout << "Intern creates " << name << std::endl;
-                return (this->*_functionPointers[i])(target);
-            } 
+            return (this->*_functionPointers[i])(target);
+            }
+            i++;
+        }
         throw FormNotFoundException();
     }
     catch (std::exception & e)
@@ -83,11 +89,6 @@ Intern::FunctionPointer Intern::_functionPointers[3] = {
     &Intern::_newPresidentialPardonForm,
     &Intern::_newShrubberyCreationForm,
 };
-
-
-
-
-
 
 
 Intern::FormNotFoundException::FormNotFoundException(void)
