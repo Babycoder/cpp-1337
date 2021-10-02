@@ -12,6 +12,7 @@
 
 #include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -19,34 +20,27 @@
 int     main()
 {
     Bureaucrat bureaucrat1("bureaucrat1", 150);
-    Bureaucrat bureaucrat2("bureaucrat2", 1);
+    Bureaucrat bureaucrat2("bureaucrat2", 10);
 
-    ShrubberyCreationForm   house("house");
-    RobotomyRequestForm     robot("robot");
-    PresidentialPardonForm  president("president");
+    Intern RandomIntern;
 
-    std::cout << bureaucrat2 << std::endl;
-    std::cout << bureaucrat1 << std::endl << std::endl << std::endl;
+    Form* ShrubberyForm;
+    Form* RobotomyRequestForm;
+    Form* PresidentialPardonForm;
 
-    bureaucrat1.signForm(house);
-    bureaucrat1.executeForm(house);
-    std::cout << house << std::endl;
-    bureaucrat2.signForm(house);
-    bureaucrat2.executeForm(house);
-    std::cout << house << std::endl << std::endl;
 
-    bureaucrat1.signForm(robot);
-    bureaucrat1.executeForm(robot);
-    std::cout << robot << std::endl;
-    bureaucrat2.signForm(robot);
-    bureaucrat2.executeForm(robot);
-    std::cout << robot << std::endl << std::endl;
+    ShrubberyForm = RandomIntern.makeForm("shrubbery creation", "Loan");
+    RobotomyRequestForm = RandomIntern.makeForm("robotomy request", "Robot");
+    PresidentialPardonForm = RandomIntern.makeForm("Presidential pardon", "President");
 
-    bureaucrat1.signForm(president);
-    bureaucrat1.executeForm(president);
-    std::cout << president << std::endl;
-    bureaucrat2.signForm(president);
-    bureaucrat2.executeForm(president);
-    std::cout << president << std::endl << std::endl;
+    try
+    {
+        ShrubberyForm->beSigned(bureaucrat2);
+        ShrubberyForm->execute(bureaucrat2);
+    }
+    catch (std::exception &e)
+    {
+        std::cout << e.what() << std::endl;
+    }
     return 0;
 }

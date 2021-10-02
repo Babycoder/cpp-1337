@@ -26,10 +26,12 @@ class Intern
 		Intern(const Intern& src);
 		~Intern(void);
 
-		Intern						&operator= (const Intern& rhs);
+		Intern	&operator= (const Intern& rhs);
 
-		Form						*makeForm(std::string name, std::string target);
+		Form	*makeForm(std::string name, std::string target);
+
 		typedef Form* (Intern::*FunctionPointer)(std::string);
+		
 		class FormNotFoundException : public std::exception
 		{
 			public:
@@ -37,6 +39,8 @@ class Intern
 				virtual ~FormNotFoundException(void) throw();
 				virtual const char    *what() const throw();
 		};
+	
+	
 	private:
 		Form*						_newPresidentialPardonForm(std::string target);
 		Form*						_newRobotomyRequestForm(std::string target);

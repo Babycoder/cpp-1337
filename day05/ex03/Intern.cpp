@@ -33,7 +33,8 @@ Intern::~Intern(void)
 
 Intern  & Intern::operator= (const Intern &rhs)
 {
-    static_cast <void> (rhs);
+    if (this == &rhs)
+        return(*this);
     return (*this);
 }
 
@@ -58,10 +59,10 @@ Form *   Intern::makeForm(std::string name, std::string target)
     catch (std::exception & e)
     {
         std::cout << e.what() << std::endl;
-        return nullptr;
+        return NULL;
     }
 }
-
+ 
 Form*   Intern::_newPresidentialPardonForm(std::string target)
 {
     return (new PresidentialPardonForm(target));
