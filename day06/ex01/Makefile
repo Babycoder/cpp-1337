@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/02 15:45:30 by ayghazal          #+#    #+#              #
-#    Updated: 2021/10/05 14:58:10 by ayghazal         ###   ########.fr        #
+#    Created: 2021/10/05 14:55:51 by ayghazal          #+#    #+#              #
+#    Updated: 2021/10/05 20:15:15 by ayghazal         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC=  conversion.cpp main.cpp
+SRC=  main.cpp
 
-FLAGS=-Wall -Wextra -Werror -std=c++98
+FLAGS=-Wall -Wextra -Werror
 
-NAME=convert
+NAME=a.out
 
 $(NAME):
 	g++ $(FLAGS) $(SRC) -o $(NAME)
