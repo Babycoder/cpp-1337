@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/06 01:44:49 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/06 02:09:23 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/06 02:48:57 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Base * generate(void){
 	return base;
 }
 
-void identify_from_pointer( Base * p ){
+void identify( Base * p ){
 	
     A* baseA;
 	B* baseB;
@@ -47,7 +47,7 @@ void identify_from_pointer( Base * p ){
 	return ;
 }
 
-void identify_from_reference( Base & p ){
+void identify( Base & p ){
 	A* baseA;
 	B* baseB;
 	C* baseC;
@@ -67,9 +67,9 @@ void identify_from_reference( Base & p ){
 int     main()
 {
     Base    *base = generate();
-    identify_from_pointer(base);
+    identify(base);
     std::cout << std::endl << std::endl;
-    identify_from_reference(*base);
+    identify(*base);
     delete base;
     return 0;
 }
