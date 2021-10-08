@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/07 21:55:03 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/07 23:23:31 by ayghazal         ###   ########.fr       */
+/*   Created: 2021/10/07 23:19:09 by ayghazal          #+#    #+#             */
+/*   Updated: 2021/10/07 23:20:51 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "easyfind.hpp"
+#ifndef SPAN_HPP
+#define SPAN_HPP
 
-int     main()
-{
-    std::array<int, 5>  arr = {1, 2, 3, 4, 5};
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <iterator>
+#include <array>
 
-    try
-    {
-        std::cout << easyfind(arr, 4) << std::endl;
-    }
-    catch (std::exception & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    return (0);
-}
+#endif
