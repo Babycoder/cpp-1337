@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:19:09 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/10 01:06:31 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/10 02:51:29 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ class Span
 		std::vector<int>	&	getVector(void);
 
 		void					addNumber(int nb);
+        int                     longestSpan(void);
+        int                     shortestSpan(void);
+        
 		class limitException : public std::exception
 		{
 			public:

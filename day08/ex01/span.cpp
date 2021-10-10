@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:19:07 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/10 01:11:27 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/10 03:04:33 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,33 @@ void		Span::addNumber(int nb)
 	
 }
 
+
+int					Span::longestSpan(void)
+{
+	if (_vector.size() < 2)
+		return (0);
+	std::sort(_vector.begin(), _vector.end());
+
+	return (*(_vector.end() - 1) - *_vector.begin());
+}
+
+int					Span::shortestSpan(void)
+{
+	int					ret = 2147483647;
+	int					prev;
+
+	if (_vector.size() < 2)
+		return (0);
+	std::sort(_vector.begin(), _vector.end());
+	prev = *_vector.begin();
+	for (std::vector<int>::iterator it = _vector.begin() + 1 ; it != _vector.end() ; it++)
+	{
+		if (ret > *it - prev)
+			ret = *it - prev;
+		prev = *it;
+	}
+	return (ret);
+}
 
 std::ostream	&		operator<<(std::ostream & o, Span & rhs)
 {
