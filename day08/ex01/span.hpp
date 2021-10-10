@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:19:09 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/07 23:20:51 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/10 01:06:31 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,33 @@
 #include <string>
 #include <algorithm>
 #include <iterator>
+#include <vector>
 #include <array>
+
+class Span
+{
+	private:
+		std::vector<int>		_vector;
+		unsigned int			_size;
+	public:
+		Span();
+		Span(unsigned int N);
+		Span(Span const & src);
+		virtual ~Span();
+
+		Span	&	operator=(Span const & rhs);
+
+		std::vector<int>	&	getVector(void);
+
+		void					addNumber(int nb);
+		class limitException : public std::exception
+		{
+			public:
+				virtual const char    *what() const throw(){return("Limit reached");};
+		};
+
+};
+
+std::ostream	&		operator<<(std::ostream & o, Span & rhs);
 
 #endif
