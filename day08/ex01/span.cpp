@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:19:07 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/10 03:04:33 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/10 03:05:31 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Span	&	Span::operator=(Span const & rhs)
 	_vector.assign(rhs._vector.begin(),rhs._vector.end());
 	return *this;
 }
-
 
 void		Span::addNumber(int nb)
 {

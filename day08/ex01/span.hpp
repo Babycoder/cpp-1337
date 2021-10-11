@@ -6,7 +6,7 @@
 /*   By: ayghazal <ayghazal@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/07 23:19:09 by ayghazal          #+#    #+#             */
-/*   Updated: 2021/10/10 02:51:29 by ayghazal         ###   ########.fr       */
+/*   Updated: 2021/10/10 03:05:50 by ayghazal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ class Span
 			public:
 				virtual const char    *what() const throw(){return("Limit reached");};
 		};
-
 };
 
 std::ostream	&		operator<<(std::ostream & o, Span & rhs);
